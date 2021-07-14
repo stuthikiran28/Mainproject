@@ -1,0 +1,148 @@
+create database bldbank
+usebldbank
+
+
+DROP TABLE IF EXISTS `admin`;
+
+CREATE TABLE `admin` (  
+ `admin_id` int(11) NOT NULL auto_increment,
+  `name` varchar(30) NOT NULL,
+  `username` varchar(24) NOT NULL,
+  `password` varchar(24) NOT NULL,
+  PRIMARY KEY  (`admin_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `admin` VALUES (2,'Kishor Kadam','kadamk33','java@1991'),
+(4,'Sagar Kharmale','sagar','sagar@123'),
+(5,'Govind Raut','govind','raut@12345'),
+(7,'Santosh Karvekar','santosh','santosh@123');
+
+
+DROP TABLE IF EXISTS `bregister`;
+
+CREATE TABLE `bregister` (
+  `bid` int(11) NOT NULL AUTO_INCREMENT,
+  `bname` varchar(45) NOT NULL,
+  `bld` varchar(45) NOT NULL,
+  `address` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `email` text,
+  PRIMARY KEY (`bid`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `hregister;
+
+DROP TABLE IF EXISTS `uregister`;CREATE TABLE `hregister` (
+  `hid` int(11) NOT NULL AUTO_INCREMENT,
+  `hname` varchar(45) NOT NULL,
+  `trdate` varchar(45) NOT NULL,
+  `bld` varchar(45) NOT NULL,
+  `address` varchar(45) NOT NULL,
+  `pass` varchar(45) NOT NULL,
+  `email` text,
+  PRIMARY KEY (`hid`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `uregister`;
+
+CREATE TABLE `uregister` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `mobile` varchar(45) NOT NULL,
+  `gender` varchar(45) NOT NULL,
+  `age` varchar(45) NOT NULL,
+  `bld` varchar(45) NOT NULL,
+  `location` varchar(45) NOT NULL,
+  `pass` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+
+
+
+DROP TABLE IF EXISTS `rhospital`;
+
+create table rhospital(
+`rid` int(11) NOT NULL auto_increment,
+uid  VARCHAR(15) not null,
+hid  VARCHAR(15) not null,
+bid  VARCHAR(15) not null,
+  hname VARCHAR(15) not null,
+  hlocation VARCHAR(15) not null,
+ rname VARCHAR(15) not null,
+ rnumber VARCHAR(15) not null,
+ rblod VARCHAR(15) not null,
+ rAdhaar_no VARCHAR(15) not null,
+ rstatus VARCHAR(15),
+ rlocation VARCHAR(15) not null,
+  rgender VARCHAR(15) not null,
+rage VARCHAR(15) not null,
+ rtype VARCHAR(45) not null,
+  PRIMARY KEY  (`rid`) not null
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+create table rhospital(
+`rid` int(11) NOT NULL auto_increment,
+hid  VARCHAR(15) not null,
+  hname VARCHAR(15) not null,
+  hlocation VARCHAR(15) not null,
+ rname VARCHAR(15) not null,
+ rnumber VARCHAR(15) not null,
+ rblod VARCHAR(15),
+ rAdhaar_no VARCHAR(15),
+ rstatus VARCHAR(15),
+ rlocation VARCHAR(15),
+  rgender VARCHAR(15),
+rage VARCHAR(15),
+ rtype VARCHAR(45),
+  PRIMARY KEY  (`rid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+create table rhospital(
+`rid` int(11) NOT NULL auto_increment,
+hid  VARCHAR(15) not null,
+  hname VARCHAR(15) not null,
+  hlocation VARCHAR(15) not null,
+ rname VARCHAR(15) not null,
+ rnumber VARCHAR(15) not null,
+ rblod VARCHAR(15),
+ rAdhaar_no VARCHAR(15),
+ rstatus VARCHAR(15),
+ rlocation VARCHAR(15),
+  rgender VARCHAR(15),
+rage VARCHAR(15),
+ rtype VARCHAR(45),
+  PRIMARY KEY  (`rid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+
+create table request(
+id int(11),
+name VARCHAR(45) not null,
+email VARCHAR(45) not null,
+age VARCHAR(45) not null,
+gender VARCHAR(45) not null,
+mobile VARCHAR(45) not null,
+bld VARCHAR(45) not null,
+location VARCHAR(45) not null,
+Adhaar_no VARCHAR(45) not null, 
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
